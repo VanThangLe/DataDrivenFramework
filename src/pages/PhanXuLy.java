@@ -35,11 +35,20 @@ public class PhanXuLy {
 		missionType.selectByValue("Nhiệm vụ Bộ");
 	}
 	
-	public void inputContent() throws Exception {
-		driver.findElement(By.xpath("")).sendKeys();
+	public void inputFollowingContent() throws Exception {
+		driver.findElement(By.xpath("following_content_xpath")).sendKeys();
 	}
 	
-	public void selectCalendar() throws Exception {
-		driver.findElement(By.xpath(""))
+	public void selectProcessingTerm() throws Exception {
+		Select processingTerm = new Select(driver.findElement(By.xpath("processing_term_xpath")));
+		processingTerm.selectByValue("31");
+	}
+	
+	public void clickSaveAndClose() {
+		driver.findElement(By.xpath("//div[@class='tao-nhiem-vu-top']//button[contains(text(), 'Lưu và đóng')]")).click();
+	}
+	
+	public void clickHandingMission() {
+		
 	}
 }

@@ -14,7 +14,7 @@ public class Compare {
 	
 	public static boolean validatePageTitle(WebDriver driver, String expectedTitle) {
 		boolean flag = false;
-		if(driver.getCurrentUrl().equalsIgnoreCase(expectedTitle)) {
+		if(driver.getTitle().equalsIgnoreCase(expectedTitle)) {
 			flag = true;
 		}
 		return flag;

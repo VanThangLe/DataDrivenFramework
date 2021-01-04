@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -15,9 +16,17 @@ public class DriverInstance {
 
 	@BeforeMethod
 	public void initiateDriverInstance() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-		System.getProperty("user.dir") + "/driver/chromedriver.exe");
-		driver = new ChromeDriver();
+		if(Utility.fetchPropertyValue("browserName").toString().equalsIgnoreCase("chrome")){
+			System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+			driver = new ChromeDriver();
+		} else if (Utility.fetchPropertyValue("browserName").toString().equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");
+			driver = new FirefoxDriver();
+		} else {
+			System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+	
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(Utility.fetchPropertyValue("applicationURL").toString());

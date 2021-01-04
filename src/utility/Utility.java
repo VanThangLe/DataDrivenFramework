@@ -10,7 +10,6 @@ public class Utility {
 		FileInputStream file = new FileInputStream("./config/config.properties");
 		Properties property = new Properties();
 		property.load(file);
-		property.get(key);
 		return property.get(key);
 	}
 	
@@ -18,7 +17,6 @@ public class Utility {
 		FileInputStream file = new FileInputStream("./config/elements.properties");
 		Properties property = new Properties();
 		property.load(file);
-		property.get(key);
 		return property.get(key).toString();
 	}
 }

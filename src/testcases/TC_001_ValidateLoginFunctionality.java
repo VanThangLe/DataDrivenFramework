@@ -14,5 +14,6 @@ public class TC_001_ValidateLoginFunctionality extends DriverInstance{
 		login.enterUsername(username);
 		login.enterPassword(password);
 		login.clickSignin();
+		Thread.sleep(3000);
 	}
 }

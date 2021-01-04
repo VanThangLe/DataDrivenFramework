@@ -24,4 +24,8 @@ public class LoginPage {
 	public void clickSignin() throws Exception {
 		driver.findElement(By.xpath(Utility.fetchLocatorValue("login_signin_xpath"))).click();
 	}
+	
+	public String checkURL() {
+		return driver.getCurrentUrl();
+	}
 }

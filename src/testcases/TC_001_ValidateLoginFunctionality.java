@@ -14,7 +14,11 @@ public class TC_001_ValidateLoginFunctionality extends DriverInstance{
 		login.enterUsername(username);
 		login.enterPassword(password);
 		login.clickSignin();
-		Thread.sleep(3000);
+		String expectedResult = "http://qlnv-uat.vhtcddh.com/nhiem-vu/nhiem-vu-don-vi";
+		String actualResult = login.checkURL();
+		if(actualResult.equals(expectedResult)) {
+			assert(true);
+		} else assert(false);
 		
 	}
 }

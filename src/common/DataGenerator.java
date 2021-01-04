@@ -13,6 +13,7 @@ public class DataGenerator {
 	@DataProvider(name = "Excel")
 	public static Object[][] testDataGenerator() throws Exception {
 		FileInputStream file = new FileInputStream("D:\\Auto\\DataDrivenFramework\\testdata\\TestData.xlsx");
+		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
 		XSSFSheet loginSheet = workbook.getSheet("Login");
 		int numberOfData = loginSheet.getPhysicalNumberOfRows();

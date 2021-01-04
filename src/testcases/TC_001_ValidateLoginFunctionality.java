@@ -2,8 +2,8 @@ package testcases;
 
 import org.testng.annotations.Test;
 
-import base.DriverInstance;
-import datagenerators.DataGenerator;
+import common.DataGenerator;
+import common.DriverInstance;
 import pages.LoginPage;
 
 public class TC_001_ValidateLoginFunctionality extends DriverInstance{
@@ -15,5 +15,6 @@ public class TC_001_ValidateLoginFunctionality extends DriverInstance{
 		login.enterPassword(password);
 		login.clickSignin();
 		Thread.sleep(3000);
+		
 	}
 }

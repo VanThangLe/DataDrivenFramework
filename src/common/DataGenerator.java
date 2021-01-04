@@ -1,4 +1,4 @@
-package datagenerators;
+package common;
 
 import java.io.FileInputStream;
 

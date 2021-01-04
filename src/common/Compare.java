@@ -1,4 +1,4 @@
-package assertions;
+package common;
 
 import org.openqa.selenium.WebDriver;
 

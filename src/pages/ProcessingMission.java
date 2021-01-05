@@ -38,8 +38,8 @@ public class ProcessingMission {
 		missionType.selectByValue("Nhiệm vụ Bộ");
 	}
 	
-	public void inputFollowingContent() throws Exception {
-		driver.findElement(By.xpath("following_content_xpath")).sendKeys();
+	public void inputFollowingContent(String content) throws Exception {
+		driver.findElement(By.xpath(Utility.fetchLocatorValue("following_content_xpath"))).sendKeys(content);
 	}
 	
 	public void selectProcessingTerm() throws Exception {

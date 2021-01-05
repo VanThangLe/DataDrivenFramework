@@ -31,8 +31,8 @@ public class DriverInstance {
 		
 	}
 	
-	@AfterMethod
-	public void closeDriverInstance() {
-		driver.quit();
-	}
+	//@AfterMethod
+	//public void closeDriverInstance() {
+	//	driver.quit();
+	//}
 }

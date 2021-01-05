@@ -28,4 +28,8 @@ public class LoginPage {
 	public String checkURL() {
 		return driver.getCurrentUrl();
 	}
+	
+	public String checkTitle() {
+		return driver.getTitle();
+	}
 }

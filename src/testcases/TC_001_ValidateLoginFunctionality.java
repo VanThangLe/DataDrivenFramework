@@ -2,23 +2,18 @@ package testcases;
 
 import org.testng.annotations.Test;
 
-import common.DataGenerator;
 import common.DriverInstance;
+import common.Utility;
 import pages.LoginPage;
 
 public class TC_001_ValidateLoginFunctionality extends DriverInstance{
 	
-	@Test(dataProvider = "Excel", dataProviderClass = DataGenerator.class)
-	public void tc_001_Login_Functionality(String username, String password) throws Exception{
+	@Test
+	public void tc_001_Login_Functionality() throws Exception{
 		LoginPage login = new LoginPage(driver);
-		login.enterUsername(username);
-		login.enterPassword(password);
+		login.enterUsername(Utility.getCellData(0, 1));
+		login.enterPassword(Utility.getCellData(1, 1));
 		login.clickSignin();
-		String expectedResult = "http://qlnv-uat.vhtcddh.com/nhiem-vu/nhiem-vu-don-vi";
-		String actualResult = login.checkURL();
-		if(actualResult.equals(expectedResult)) {
-			assert(true);
-		} else assert(false);
-		
+		Thread.sleep(3000);
 	}
 }

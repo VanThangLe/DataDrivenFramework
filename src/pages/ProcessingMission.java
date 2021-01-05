@@ -1,16 +1,19 @@
 package pages;
 
+//import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import common.Utility;
 
-public class PhanXuLy {
+public class ProcessingMission {
 	
 	WebDriver driver;
 	
-	public PhanXuLy(WebDriver driver) {
+	public ProcessingMission(WebDriver driver) {
 		this.driver = driver;
 	}
 	
@@ -44,11 +47,22 @@ public class PhanXuLy {
 		processingTerm.selectByValue("31");
 	}
 	
-	public void clickSaveAndClose() {
+	public void clickSaveAndClose() throws Exception {
 		driver.findElement(By.xpath("//div[@class='tao-nhiem-vu-top']//button[contains(text(), 'Lưu và đóng')]")).click();
 	}
 	
-	public void clickHandingMission() {
+	public void clickHandingMission() throws Exception {
+		//List<WebElement> elementsIcons = driver.findElements(By.xpath(""));
+		//for(WebElement e: elementsIcons) {
+			
+		//}
+	}
+	
+	public void selectHanderMission() throws Exception {
 		
+	}
+	
+	public void clickHandling() throws Exception {
+		driver.findElement(By.xpath("button_handing_xpath")).click();
 	}
 }

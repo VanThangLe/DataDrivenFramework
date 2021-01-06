@@ -9,7 +9,6 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.WebDriver;
 
 public class Utility {
 
@@ -18,6 +17,7 @@ public class Utility {
 	private static XSSFCell cell;
 	private static XSSFRow row;
 
+	//Set config to read or write excel file
 	public static void setExcelFile(String excelPath, String sheetName) throws Exception {
 		try {
 			FileInputStream file = new FileInputStream(excelPath);
@@ -27,9 +27,10 @@ public class Utility {
 			throw (e);
 		}
 	}
-
+	
+	//Read file excel
 	public static String getCellData(int rowNumber, int columnNumber) throws Exception {
-		setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Login");
+		//setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Login");
 		try {
 			cell = sheet.getRow(rowNumber).getCell(columnNumber);
 			String cellData = cell.getStringCellValue();
@@ -39,6 +40,7 @@ public class Utility {
 		}
 	}
 
+	//Write file excel
 	@SuppressWarnings("static-access")
 	public static void setCellData(String result, int rowNumber, int columnNumber) throws Exception {
 		try {
@@ -59,6 +61,7 @@ public class Utility {
 		}
 	}
 
+	//Read file config properties
 	public static Object fetchPropertyValue(String key) throws IOException {
 		FileInputStream file = new FileInputStream("./config/config.properties");
 		Properties property = new Properties();
@@ -66,26 +69,11 @@ public class Utility {
 		return property.get(key);
 	}
 
+	//Read file element properties
 	public static String fetchLocatorValue(String key) throws IOException {
 		FileInputStream file = new FileInputStream("./config/elements.properties");
 		Properties property = new Properties();
 		property.load(file);
 		return property.get(key).toString();
-	}
-
-	public static boolean validatePageURL(WebDriver driver, String expectedURL) {
-		boolean flag = false;
-		if (driver.getCurrentUrl().equalsIgnoreCase(expectedURL)) {
-			flag = true;
-		}
-		return flag;
-	}
-
-	public static boolean validatePageTitle(WebDriver driver, String expectedTitle) {
-		boolean flag = false;
-		if (driver.getTitle().equalsIgnoreCase(expectedTitle)) {
-			flag = true;
-		}
-		return flag;
 	}
 }

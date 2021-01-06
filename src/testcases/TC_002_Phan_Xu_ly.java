@@ -2,6 +2,7 @@ package testcases;
 
 import org.testng.annotations.Test;
 
+import common.Constant;
 import common.DriverInstance;
 import common.Utility;
 import pages.ProcessingMission;
@@ -11,13 +12,22 @@ public class TC_002_Phan_Xu_ly extends DriverInstance {
 	@Test
 	public void tc_002_Phan_Xu_Ly() throws Exception {
 		ProcessingMission processingMission = new ProcessingMission(driver);
+		Utility.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Login");
 		processingMission.enterUsername(Utility.getCellData(1, 1));
 		processingMission.enterPassword(Utility.getCellData(1, 2));
 		processingMission.clickSignin();
 		Thread.sleep(3000);
 		processingMission.clickButtonCreateMission();
+		processingMission.clickMissionType();
 		processingMission.selectMissionType();
-		processingMission.inputFollowingContent("Hệ thống quản lý nhiệm vụ và hồ sơ công việc");
-		processingMission.selectProcessingTerm();
+		Utility.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Data");
+		processingMission.inputFollowingContent(Utility.getCellData(1, 0));
+		Thread.sleep(5000);
+		//processingMission.selectProcessingTerm();
+		//processingMission.clickSaveAndClose();
+		//processingMission.clickHandlingMission();
+		//processingMission.selectHandlerMission();
+		//processingMission.clickHandling();
+		
 	}
 }

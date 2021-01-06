@@ -9,12 +9,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class DriverInstance {
-	
+
 	public WebDriver driver;
 
 	@BeforeMethod
 	public void initiateDriverInstance() throws Exception {
-		if(Utility.fetchPropertyValue("browserName").toString().equalsIgnoreCase("chrome")){
+		if (Utility.fetchPropertyValue("browserName").toString().equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (Utility.fetchPropertyValue("browserName").toString().equalsIgnoreCase("firefox")) {
@@ -24,15 +24,15 @@ public class DriverInstance {
 			System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 			driver = new ChromeDriver();
 		}
-	
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(Utility.fetchPropertyValue("applicationURL").toString());
-		
+
 	}
-	
-	//@AfterMethod
-	//public void closeDriverInstance() {
-	//	driver.quit();
-	//}
+
+	@AfterMethod
+	public void closeDriverInstance() {
+		driver.quit();
+	}
 }

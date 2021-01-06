@@ -10,6 +10,7 @@
     <classes>
       <class name="testcases.TC_002_Phan_Xu_ly">
         <methods>
+          <include name="closeDriverInstance"/>
           <include name="tc_002_Phan_Xu_Ly"/>
           <include name="initiateDriverInstance"/>
         </methods>

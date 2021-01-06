@@ -2,31 +2,54 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17774" started-at="2021-01-05T16:04:14Z" finished-at="2021-01-05T16:04:32Z">
+  <suite name="Default suite" duration-ms="52674" started-at="2021-01-06T15:53:33Z" finished-at="2021-01-06T15:54:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17774" started-at="2021-01-05T16:04:14Z" finished-at="2021-01-05T16:04:32Z">
+    <test name="Default test" duration-ms="52674" started-at="2021-01-06T15:53:33Z" finished-at="2021-01-06T15:54:26Z">
       <class name="testcases.TC_002_Phan_Xu_ly">
-        <test-method status="PASS" signature="initiateDriverInstance()[pri:0, instance:testcases.TC_002_Phan_Xu_ly@548e7350]" name="initiateDriverInstance" is-config="true" duration-ms="12488" started-at="2021-01-05T23:04:14Z" finished-at="2021-01-05T23:04:26Z">
+        <test-method status="PASS" signature="initiateDriverInstance()[pri:0, instance:testcases.TC_002_Phan_Xu_ly@1a968a59]" name="initiateDriverInstance" is-config="true" duration-ms="14018" started-at="2021-01-06T22:53:33Z" finished-at="2021-01-06T22:53:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initiateDriverInstance -->
-        <test-method status="FAIL" signature="tc_002_Phan_Xu_Ly()[pri:0, instance:testcases.TC_002_Phan_Xu_ly@548e7350]" name="tc_002_Phan_Xu_Ly" duration-ms="5253" started-at="2021-01-05T23:04:26Z" finished-at="2021-01-05T23:04:32Z">
-          <exception class="org.openqa.selenium.support.ui.UnexpectedTagNameException">
+        <test-method status="FAIL" signature="tc_002_Phan_Xu_Ly()[pri:0, instance:testcases.TC_002_Phan_Xu_ly@1a968a59]" name="tc_002_Phan_Xu_Ly" duration-ms="37219" started-at="2021-01-06T22:53:48Z" finished-at="2021-01-06T22:54:25Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Element should have been "select" but was "input"
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"processing_term_xpath"}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'THANGLV3-LAPTOP', ip: '192.168.19.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: driver.version: unknown]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}), userDataDir=C:\Users\thang\AppData\Local\Temp\scoped_dir6048_162677506}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:55427}, acceptInsecureCerts=false, browserVersion=87.0.4280.88, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
+Session ID: 6440b12d928a143d0986009b65841709
+*** Element info: {Using=xpath, value=processing_term_xpath}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been "select" but was "input"
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"processing_term_xpath"}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'THANGLV3-LAPTOP', ip: '192.168.19.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.<init>(Select.java:47)
-	at pages.ProcessingMission.selectMissionType(ProcessingMission.java:37)
-	at testcases.TC_002_Phan_Xu_ly.tc_002_Phan_Xu_Ly(TC_002_Phan_Xu_ly.java:19)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}), userDataDir=C:\Users\thang\AppData\Local\Temp\scoped_dir6048_162677506}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:55427}, acceptInsecureCerts=false, browserVersion=87.0.4280.88, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
+Session ID: 6440b12d928a143d0986009b65841709
+*** Element info: {Using=xpath, value=processing_term_xpath}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pages.ProcessingMission.clickProcessingTerm(ProcessingMission.java:54)
+	at testcases.TC_002_Phan_Xu_ly.tc_002_Phan_Xu_Ly(TC_002_Phan_Xu_ly.java:25)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -53,10 +76,14 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.support.ui.UnexpectedTagNameException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc_002_Phan_Xu_Ly -->
+        <test-method status="PASS" signature="closeDriverInstance()[pri:0, instance:testcases.TC_002_Phan_Xu_ly@1a968a59]" name="closeDriverInstance" is-config="true" duration-ms="1382" started-at="2021-01-06T22:54:25Z" finished-at="2021-01-06T22:54:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriverInstance -->
       </class> <!-- testcases.TC_002_Phan_Xu_ly -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

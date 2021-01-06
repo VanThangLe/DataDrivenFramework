@@ -30,7 +30,6 @@ public class Utility {
 	
 	//Read file excel
 	public static String getCellData(int rowNumber, int columnNumber) throws Exception {
-		//setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Login");
 		try {
 			cell = sheet.getRow(rowNumber).getCell(columnNumber);
 			String cellData = cell.getStringCellValue();

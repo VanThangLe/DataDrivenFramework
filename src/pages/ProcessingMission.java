@@ -69,14 +69,19 @@ public class ProcessingMission {
 		driver.findElement(By.xpath(Utility.fetchLocatorValue("icon_handling_xpath"))).click();
 	}
 
-	// Chọn Người Chủ Trì Và Phối Hợp
-	public void selectHandlerMission() throws Exception {
-		driver.findElement(By.xpath(Utility.fetchLocatorValue(""))).click();
+	// Chọn Chủ Trì
+	public void selectHost() throws Exception {
+		driver.findElement(By.xpath(Utility.fetchLocatorValue("checkbox_host_xpath"))).click();
+	}
+
+	// Chọn Phối Hợp
+	public void selectCoop() throws Exception {
+		driver.findElement(By.xpath(Utility.fetchLocatorValue("checkbox_coop_xpath"))).click();
 	}
 
 	// Click Button Phân Xử Lý
 	public void clickHandling() throws Exception {
-		driver.findElement(By.xpath("button_handling_xpath")).click();
+		driver.findElement(By.xpath(Utility.fetchLocatorValue("button_handling_xpath"))).click();
 	}
 
 	// Validate page URL

@@ -37,10 +37,18 @@ public class TC_002_Phan_Xu_ly extends DriverInstance {
 		processingMission.clickHandlingMission();
 		Thread.sleep(2000);
 		processingMission.selectHost();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		processingMission.selectCoop();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		processingMission.clickHandling();
 		
+		//Kết quả test
+		String expectedResult = "Chưa thực hiện";
+		String actualResult = processingMission.getStatus();
+		if(actualResult.equals(expectedResult)) {
+			System.out.println("Pass");
+		} else {
+			System.out.println("Fail");
+		}
 	}
 }

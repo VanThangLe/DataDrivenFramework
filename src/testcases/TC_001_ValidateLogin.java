@@ -6,7 +6,7 @@ import common.DriverInstance;
 import common.Utility;
 import pages.LoginPage;
 
-public class TC_001_ValidateLoginFunctionality extends DriverInstance{
+public class TC_001_ValidateLogin extends DriverInstance{
 	
 	@Test
 	public void tc_001_Login_Functionality() throws Exception{

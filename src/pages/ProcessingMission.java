@@ -51,12 +51,12 @@ public class ProcessingMission {
 
 	// Chọn Hạn Xử Lý
 	public void clickProcessingTerm() throws Exception {
-		driver.findElement(By.xpath("processing_term_xpath")).click();
+		driver.findElement(By.xpath(Utility.fetchLocatorValue("processing_term_xpath"))).click();
 	}
 
 	// Chọn Hạn Xử Lý
 	public void selectProcessingTerm(String dateTerm) throws Exception {
-		driver.findElement(By.xpath("processing_term_xpath")).sendKeys(dateTerm);
+		driver.findElement(By.xpath(Utility.fetchLocatorValue("processing_term_xpath"))).sendKeys(dateTerm);
 	}
 
 	// Click Lưu và Đóng

@@ -11,6 +11,7 @@ public class TC_002_Phan_Xu_ly extends DriverInstance {
 	
 	@Test
 	public void tc_002_Phan_Xu_Ly() throws Exception {
+		
 		ProcessingMission processingMission = new ProcessingMission(driver);
 		
 		//Đăng nhập
@@ -45,10 +46,7 @@ public class TC_002_Phan_Xu_ly extends DriverInstance {
 		//Kết quả test
 		String expectedResult = "Chưa thực hiện";
 		String actualResult = processingMission.getStatus();
-		if(actualResult.equals(expectedResult)) {
-			System.out.println("Pass");
-		} else {
-			System.out.println("Fail");
-		}
+		if(actualResult.equals(expectedResult)) assert true;
+		else assert false;
 	}
 }

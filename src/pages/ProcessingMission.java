@@ -84,26 +84,8 @@ public class ProcessingMission {
 		driver.findElement(By.xpath(Utility.fetchLocatorValue("button_handling_xpath"))).click();
 	}
 
-	//Get Trang Thai
+	// Get Trạng Thái
 	public String getStatus() throws Exception {
 		return driver.findElement(By.xpath(Utility.fetchLocatorValue("status_xpath"))).getText();
-	}
-	
-	// Validate page URL
-	public static boolean validatePageURL(WebDriver driver, String expectedURL) {
-		boolean flag = false;
-		if (driver.getCurrentUrl().equalsIgnoreCase(expectedURL)) {
-			flag = true;
-		}
-		return flag;
-	}
-
-	// Validate page title
-	public static boolean validatePageTitle(WebDriver driver, String expectedTitle) {
-		boolean flag = false;
-		if (driver.getTitle().equalsIgnoreCase(expectedTitle)) {
-			flag = true;
-		}
-		return flag;
 	}
 }
